@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+aiproject/
+
+# Environment files
+*.env
+
+# SQLite DB
+db.sqlite3
+
+# Media and collected static
+/media/
+staticfiles/
+
+# IDE configs
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+ml_models/
