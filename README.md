@@ -1,4 +1,4 @@
-# Automated Review System
+# Automated Review Rating System
 
 A Django-based web application that allows users to submit, view, and analyze reviews.  
 It integrates machine learning models to provide insights such as aggregated ratings and predictions.
