@@ -34,6 +34,8 @@ automated-review-system/
 │── requirements.txt   # Dependencies
 │── .gitignore         # Ignored files
 
+```
+
 ## Note About ML Models
 ```markdown
 ## 🔮 ML Models
@@ -44,7 +46,7 @@ Since model files are usually large, they are not pushed to GitHub.
 You can either:
 - Train your own models and save them into `ml_models/`, or  
 - Request pre-trained models from the project maintainer.  
-
+```
 
 ## ⚙️ Installation & Setup
 
