@@ -42,7 +42,7 @@ automated-review-system/
    python -m venv venv
    
 3. Activate the environment:
-   windows : venv\Scripts\activate
+   windows : venv\Scripts\activate **or
    mac/linux : source venv/bin/activate
 
 4. Install dependencies:
