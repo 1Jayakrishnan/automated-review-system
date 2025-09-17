@@ -50,25 +50,25 @@ You can either:
 
 ## ⚙️ Installation & Setup
 
-1. Clone the repository:
+1. **Clone the repository:**
    git clone https://github.com/1Jayakrishnan/automated-review-system.git
    cd automated-review-system
 
-2. Create a virtual environment:
+2. **Create a virtual environment:**
    python -m venv venv
    
-3. Activate the environment:
+3. **Activate the environment:**
    windows : venv\Scripts\activate or
    mac/linux : source venv/bin/activate
 
-4. Install dependencies:
+4. **Install dependencies:**
    pip install -r requirements.txt
 
-5. Run migrations:
+5. **Run migrations:**
    python manage.py migrate
 
-6. Start the development server:
+6. **Start the development server:**
    python manage.py runserver
 
-7. Visit:
+7. **Visit:**
    http://127.0.0.1:8000
