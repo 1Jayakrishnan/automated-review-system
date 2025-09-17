@@ -6,12 +6,7 @@ from rest_framework.response import Response
 from rest_framework.generics import GenericAPIView
 from django.db.models import Avg, Count
 
-# import your ML predictor
-from .ml_model import predict_rating
-
-
 class ReviewAPIView(GenericAPIView):
-    """List all reviews or create a new one"""
 
     def get(self, request):
         # sorting the reviews
@@ -25,7 +20,8 @@ class ReviewAPIView(GenericAPIView):
 
         # Calculate average rating
         average = reviews.aggregate(avg=Avg('rating'))['avg'] or 0
-        average = float(f"{average:.1f}")
+        # average = float(f"{average:.1f}")
+        average = int(average)
 
         # Total number of ratings
         total_ratings = reviews.count()
@@ -49,17 +45,7 @@ class ReviewAPIView(GenericAPIView):
         }, status=status.HTTP_200_OK)
 
     def post(self, request):
-        # copy request data so we can modify it
-        data = request.data.copy()
-
-        # if no rating provided, predict from review text
-        if not data.get('rating'):
-            # adjust 'your_review' to the name of your field for review text
-            review_text = data.get('your_review') or data.get('body', '')
-            if review_text:
-                data['rating'] = predict_rating(review_text)
-
-        serializer = ReviewModelSerialization(data=data)
+        serializer = ReviewModelSerialization(data=request.data)
         if serializer.is_valid():
             serializer.save()
             return Response({

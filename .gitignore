@@ -5,6 +5,7 @@ __pycache__/
 
 # Virtual environment
 aiproject/
+aireviews/
 
 # Environment files
 *.env

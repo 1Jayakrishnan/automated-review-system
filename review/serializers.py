@@ -6,7 +6,7 @@ class ReviewModelSerialization(serializers.ModelSerializer):
     class Meta:
         model = ReviewModel
         fields = "__all__"
-        read_only_fields = ["rating", "added_at", "edited_at"]
+        read_only_fields = ["rating", "added_at"]
 
     def create(self, validated_data):
         # Predict rating if not provided
