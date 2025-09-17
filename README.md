@@ -24,6 +24,8 @@ It integrates machine learning models to provide insights such as aggregated rat
 ---
 
 ## 📂 Project Structure
+
+```
 automated-review-system/
 │── backend/           # Django project files
 │── review/            # Review app (models, views, serializers)
