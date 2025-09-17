@@ -29,7 +29,7 @@ It integrates machine learning models to provide insights such as aggregated rat
 automated-review-system/
 │── backend/           # Django project files
 │── review/            # Review app (models, views, serializers)
-│── ml_models/         # Trained ML models (ignored in GitHub)
+    │── ml_models/     # Trained ML models (ignored in GitHub)
 │── manage.py          # Django entry point
 │── requirements.txt   # Dependencies
 │── .gitignore         # Ignored files
