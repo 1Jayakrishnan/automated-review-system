@@ -25,11 +25,23 @@ It integrates machine learning models to provide insights such as aggregated rat
 
 ## 📂 Project Structure
 automated-review-system/
-│── backend/ # Django project files
-│── review/ # Review app (models, views, serializers)
-│── manage.py # Django entry point
-│── requirements.txt # Dependencies
-│── .gitignore # Ignored files
+│── backend/           # Django project files
+│── review/            # Review app (models, views, serializers)
+│── ml_models/         # Trained ML models (ignored in GitHub)
+│── manage.py          # Django entry point
+│── requirements.txt   # Dependencies
+│── .gitignore         # Ignored files
+
+## Note About ML Models
+```markdown
+## 🔮 ML Models
+The `ml_models/` folder is ignored in version control (`.gitignore`).  
+You’ll need to place the required trained models in this folder to enable ML-based predictions.  
+
+Since model files are usually large, they are not pushed to GitHub.  
+You can either:
+- Train your own models and save them into `ml_models/`, or  
+- Request pre-trained models from the project maintainer.  
 
 
 ## ⚙️ Installation & Setup
