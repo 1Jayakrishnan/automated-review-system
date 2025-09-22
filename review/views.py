@@ -12,9 +12,9 @@ class ReviewAPIView(GenericAPIView):
         # sorting the reviews
         sort_option = request.query_params.get("sort", "newest")
         if sort_option == "oldest":
-            reviews = ReviewModel.objects.all().order_by('added_at')
+            reviews = ReviewModel.objects.all().order_by('createdAt')
         else:
-            reviews = ReviewModel.objects.all().order_by('-added_at')
+            reviews = ReviewModel.objects.all().order_by('-createdAt')
 
         serialized_reviews = ReviewModelSerialization(reviews, many=True).data
 
