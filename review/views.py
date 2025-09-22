@@ -32,9 +32,11 @@ class ReviewAPIView(GenericAPIView):
             .annotate(count=Count('id'))
             .order_by('-rating')
         )
+
+        rating_counts = {item['rating']: item['count'] for item in breakdown_queryset}
         breakdown = [
-            {"stars": item['rating'], "count": item['count']}
-            for item in breakdown_queryset
+            {"stars":stars, "count":rating_counts.get(stars, 0)}
+            for stars in range(5, 0, -1)
         ]
 
         return Response({
