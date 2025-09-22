@@ -1,14 +1,14 @@
 # Automated Review Rating System
 
 A Django-based web application that allows users to submit, view, and analyze reviews.  
-It integrates machine learning models to provide insights such as aggregated ratings and predictions.
+It integrates deep learning models to provide insights such as aggregated ratings and predictions.
 
 ---
 
 ## 🚀 Features
 - Add and manage reviews
 - Aggregate ratings with statistics (average, count per star rating)
-- Machine Learning integration for predictions
+- Deep Learning integration for predictions
 - REST APIs built with Django REST Framework
 - Secure environment handling with `.env` files
 
@@ -29,7 +29,7 @@ It integrates machine learning models to provide insights such as aggregated rat
 automated-review-system/
 │── backend/           # Django project files
 │── review/            # Review app (models, views, serializers)
-    │── ml_models/     # Trained ML models (ignored in GitHub)
+    │── ml_models/     # Trained DL models (ignored in GitHub)
 │── manage.py          # Django entry point
 │── requirements.txt   # Dependencies
 │── .gitignore         # Ignored files
@@ -38,7 +38,7 @@ automated-review-system/
 
 ## Note About ML Models
 ```markdown
-## 🔮 ML Models
+## 🔮 DL Models
 The `ml_models/` folder is ignored in version control (`.gitignore`).  
 You’ll need to place the required trained models in this folder to enable ML-based predictions.  
 
